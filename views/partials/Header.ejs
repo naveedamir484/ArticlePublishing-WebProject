@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Article-Press</title>
+
+  <!-- /////////////////////////for icons imported////////// -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+  <!-- ///////////////font family/////////////// -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&display=swap" rel="stylesheet">
+  <!-- ////bootstrap cdn links///////// -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <!-- style sheet css -->
+  <link rel="stylesheet"  href="/css/Header.css" type="text/css">
+  <!-- ///jquary filr -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://leanmodal.finelysliced.com.au/js/jquery.leanModal.min.js"></script>
+
+
+</head>
+<body>
+
+    <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid ">
+            <div class="specialdiv ">
+              <div class="specialdivPic specialhover "><img  class="specialPic" src="/images/user3.jpg" alt=""></div>
+              <div class="specialdivText  specialhover2 dropdown"><a type="button" class=" dropdown-toggle droptext" id="dropdownMenu2" data-bs-toggle="dropdown" >  </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" href="" type="button"><a  class="droptext" id="accountHref" href="">Account</a></button></li>
+                  <li><button class="dropdown-item" href="" type="button"><a  class="droptext" id="profileHref" href="">Edit Profile</a></button></li>
+                  <li><button class="dropdown-item" href="" type="button"><a  class="droptext" id="myArticlesHref" href="">Delete Articles</a></button></li>
+                  <li><button class="dropdown-item" href="" type="button"><a  class="droptext" id="modal_trigger"  href="#modal">Change Password</a></button></li>
+                  <li><button class="dropdown-item" href="" type="button"><a  class="droptext" href="/logout">Log Out</a></button></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ///////////////////// change password ///////////////////////// -->
+
+
+   <div id="modal" class="popupContainer" style="display:none;">
+       <header class="popupHeader">
+           <span class="header_title labela"><b>Change password</b></span><span class="modal_close"><i class="fa fa-times labela"></i></span>
+       </header>
+       <section class="popupBody">
+           <!-- Social Login -->
+           <form  action="/changeP" method="post">
+
+           <div class="">
+               <label class="form-label  labela">Enter Current Password</label>
+               <input type="password" id="CPin1" class="form-control labela" >
+               <div class="form-text marginBot inputa" id="CPset1" >
+
+               </div>
+               <label class="form-label labela">Enter New Password</label>
+               <input type="password"   id="CPin2"   class="form-control labela" >
+               <div class="form-text marginBot inputa">
+
+               </div>
+               <label class="form-label labela">Confirm Password </label>
+               <input type="password" name="CPass"  id="CPin3"   class="form-control labela" >
+               <div  class="form-text inputa" id="CPset2"  >
+
+               </div>
+               <div class="CPdiv">
+                  <button type="submit" id="CPsubmit" style="display:none;" name="button"></button>
+                   <button type="button" onclick="return changepass()" class="btn btn-danger btndivCP"><h6>Change</h6></button>
+               </div>
+
+           </div>
+            </form>
+       </section>
+   </div>
+
+
+<!-- ////////////////////////////////////////////////////////////// -->
+
+            <div class="timediv timelineone " >
+              <ul class="timeul">
+                <li class="time" style="color:orange; margin-right:5px;" ><span id="days"></span></li>
+                <li class="time"><span id="hours"></span></li>
+                <li class="time"><span id="minutes"></span></li>
+                <li class="time"><span id="seconds"></span></li>
+              </ul>
+            </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon Rbutn"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <div>
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 500px;">
+            <li><hr class="divider"></li>
+            <li class="nav-item hoverpop"><a class="nav-link " id="a"   href="/"><b>Home</b></a></li>
+            <li class="nav-item hoverpop"><a class="nav-link "id="b"   href="/articles/1"  ><b>Articles</b></a></li>
+            <li class="nav-item hoverpop"><a class="nav-link" id="c" href="/"   ><b>About</b></a></li>
+            <li class="nav-item hoverpop"><a class="nav-link"  id="d" href="" ><b>Publish</b></a></li>
+            <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <b>Tags</b>
+            </a>
+            <ul   class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item searchtag" href="#">Academic disciplines‎</a></li>
+                <li><a class="dropdown-item searchtag" href="#">Business‎</a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Chronology‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Concepts‎</a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Culture‎ </a></li>
+                <li><a class="dropdown-item searchtag" href="#">Discipline‎</a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Economy‎</a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Education‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Engineering‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Entertainment‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Ethics‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Events‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Food and drink‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Geography‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Government‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Health‎</a></li>
+                <li><a class="dropdown-item searchtag"  href="#">History‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Human nature‎</a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Humanities‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Language‎</a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Law‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Mathematics‎</a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Military‎</a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Music‎ </a></li>
+
+                <li><a class="dropdown-item searchtag"  href="#">Nature‎  </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">People‎  </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Philosophy‎  </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Policy‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Politics‎  </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Religion‎  </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Science</a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Technology‎  </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Society‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Sports‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">Universe‎ </a></li>
+                <li><a class="dropdown-item searchtag"  href="#">World‎ </a></li>
+              </ul>
+            </li>
+            <li><hr class="divider"></li>
+          </ul>
+        </div>
+          <div class="timediv timelinetwo " >
+              <ul class="timeul">
+                <li class="time" style="color:orange; margin-right:5px;"><span id="days2"></span></li>
+                <li class="time" ><span id="hours2"></span></li>
+                <li class="time"><span id="minutes2"></span></li>
+                <li class="time"><span id="seconds2"></span></li>
+              </ul>
+          </div>
+          <div class="temepaturediv">
+            <div class="cloudhover"><img class="iconsizeI" src="<%=imageurl %>" ></div>
+            <div class="temptext " ><h6 class="Rcourheading"><%= city  %> : <%= temp  %> °C </h6></div>
+          </div>
+        </div>
+        </div>
+    </nav>
+
+<!-- //////////////////////////////////////// Time  script ///////////////////////////////////// -->
+
+<script type="text/javascript">
+  (function () {
+
+        x = setInterval(function() {
+          let day = new Date().getDay();
+          var hour=new Date().getHours();
+          var mint=new Date().getMinutes();
+          var sec=new Date().getSeconds();
+
+          if(sec<10 ){sec="0"+sec;}
+          if(hour<10){hour="0"+hour;}
+          if(mint<10){mint="0"+mint;}
+
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+
+            var n = weekday[day];
+
+            document.getElementById("days").innerText = n+"  ",
+            document.getElementById("hours").innerText =hour+" :",
+            document.getElementById("minutes").innerText = mint+" :",
+            document.getElementById("seconds").innerText = sec;
+
+            document.getElementById("days2").innerText = n+"  ",
+            document.getElementById("hours2").innerText =hour+" :",
+            document.getElementById("minutes2").innerText = mint+" :",
+            document.getElementById("seconds2").innerText = sec;
+
+        }, 1000)
+    }());
+</script>
+
+<!-- ///////////////////////////////////// Header js ////////////////////////////////////// -->
+
+<script type="text/javascript">
+
+ async function getId(){
+
+       const response = await fetch('/api');
+       const data = await response.json();
+       const id = data.accntID;
+       const name=data.name;
+
+   if(id!="" && name!=""){
+          $("#dropdownMenu2").text(name);
+          $("#d").attr("href", "/publish/"+id);
+          $("#accountHref").attr("href", "/account/"+id);
+          $("#profileHref").attr("href", "/profile/"+id);
+          $("#myArticlesHref").attr("href", "/myArticles/"+id);
+   }
+ };
+
+getId();
+
+$("#loginBtn").click(function(){
+
+  var val1=$("#reqField1").val();
+  var val2=$("#reqField2").val();
+
+  if(val1.length >5 && val2.length >5 ){
+       $("#showNotif").css("display","none");
+       setTimeout(function(){
+               $("#showNotif").css("display","block");
+               $("#showNotif").text("Credentials Are Wrong...");
+                                   setTimeout(function(){
+                                   window.location.reload();}, 1000);}, 4000);  }
+
+   else{ $("#showNotif").css("display","block");
+         return false;}
+
+});
+
+function signupfn(){  $("#modal_trigger").click();}
+
+$("#male").click(function() {$("#gender").text("Male");$("#hiddenInput").val("Male");});
+$("#female").click(function() { $("#gender").text("Female");$("#hiddenInput").val("Female");});
+$("#others").click(function() { $("#gender").text("Others");$("#hiddenInput").val("Others");});
+
+
+////////////////////add event listerer to all li in tag list//////////////////////////
+
+for(var i=0;i<document.querySelectorAll(".searchtag").length;i++)
+document.querySelectorAll(".searchtag")[i].addEventListener("click",getClicked);
+
+function getClicked(){
+          var liClicked=this.innerHTML;
+          window.location.href = '/search/tags/'+liClicked; }
+
+</script>
+
+
+<!-- ///////////change password popup script/////////// -->
+
+<script type="text/javascript">
+  // Plugin options and our code
+$("#modal_trigger").leanModal({
+		top: 100,
+		overlay: 0.94,
+		closeButton: ".modal_close"
+});
+
+
+async function changepass(){
+
+
+      $("#CPset1").text("") ;
+      $("#CPset2").text("") ;
+
+
+      var a=$("#CPin1").val();
+      var b=$("#CPin2").val();
+      var c=$("#CPin3").val();
+
+      if(a.length==0 || b.length==0 || c.length==0){
+        $("#CPset2").text("Fields can't be empty..") ;
+        $("#CPset2").css("color","red") ;
+        return false;
+      }
+      if (b!=c){
+        $("#CPset2").text("New password doesn't match..") ;
+        $("#CPset2").css("color","red") ;
+        return false;
+      }
+
+      const response = await fetch('/api2/'+a);
+      const data = await response.json();
+      const value = data.boolean;
+
+      if(value){
+            $("#CPset1").text("Matched....") ;
+            $("#CPset1").css("color","green") ;
+            $("#CPsubmit").click();
+            return true;
+      }
+      else {
+        $("#CPset1").text("Doesn't match with Database...") ;
+        $("#CPset1").css("color","red") ;
+        return false;
+      }
+
+      return false;
+
+  // if(id!="" && name!=""){
+  //        $("#dropdownMenu2").text(name);
+  //        $("#d").attr("href", "/publish/"+id);
+  //        $("#accountHref").attr("href", "/account/"+id);
+  //        $("#profileHref").attr("href", "/profile/"+id);
+  //        $("#myArticlesHref").attr("href", "/myArticles/"+id);
+  // }
+};
+
+</script>

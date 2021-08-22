@@ -1,0 +1,410 @@
+<%  var a=''; %>
+<% if(check==false) a='R'%>
+<%- include('partials/'+a+'Header') -%>
+
+<!-- style sheet css -->
+<link rel="stylesheet"  href="/css/zmyArticle.css" type="text/css">
+
+<!-- ////////////////////////////////////////////content///////////////////////////////////////// -->
+<section id="title">
+<div class="headerr">
+<div class="inner-headerr flex">
+ <div class="container">
+   <div class="row">
+     <div class="col-lg-6">
+         <img src="/images/book2.png" class="articleimage" alt="">
+     </div>
+     <div class="col-lg-6 "   >
+       <h1 class="titlemain" >Your Articles...</h1>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+
+</section>
+
+<!-- ///////////////////////////////////////////////////////////////////////////post card section////////////////////////////////////////////////////// -->
+
+
+<section id="searchbar">
+
+<div class="profileShowdiv"></div>
+
+ <section id="postCardSection">
+
+   <div class="picdiv">
+     <% if(posts.length !=0) { %>
+        <div class="piccc"><img  class="specialPicTwo" src="data:image/jpeg;base64,<%=posts[0].imgdata.toString('base64')%>" alt=""></div>
+      <% } else { %>
+        <div class="piccc"><img  class="specialPicTwo" src="/images/cartoonImg/m4.jpg" alt=""></div>
+      <% } %>
+   </div>
+
+   <div class="vineimaediv">
+     <h2 class="headingpublish"><i class="fas fa-book fa-sm"></i> Total no of Articles published by you : <strong><%= posts.length %></strong></h2>
+   </div>
+
+<!-- rows of the post card -->
+
+<div class="">
+<div id = "boxes">
+
+    <div id = "leftbox">
+      <div class="verticletagdivleft2">
+      </div>
+    </div>
+
+    <div id = "middlebox">
+        <div class="row">
+
+          <!-- -----------------------------------default page of accounts---------------------------------------------------------------- -->
+
+          <div class=" col-md-6 col-sm-6">
+          <div class="blog-card float">
+            <div class="meta">
+              <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+              <ul class="details">
+          <div class="namdandprofile" >
+            <div class="tempouta"><h3 class="nameperson"><i class="fas fa-at fa-sm"></i> Article : Default</h3></div>
+            <% if(posts.length !=0) { %>
+            <div class="tempoutb"><img  class="temp" src="data:image/jpeg;base64,<%=posts[0].imgdata.toString('base64')%>" alt=""></div>
+             <% } else { %>
+               <div class="tempoutb"><img  class="temp" src="/images/cartoonImg/m4.jpg" alt=""></div>
+            <% } %>
+          </div>
+          <li class="author"><span class="postcardtags"><i class="fas fa-user"></i></span> Sample Article </li>
+          <li class="date"><span class="postcardtags"><i class="fas fa-calendar-week"></i></span> 01-01-2021 </li>
+          <li class="tags">
+           <ul>
+             <span class="postcardtags"><i class="fas fa-tag"></i></span>
+             <li>Businnes, </li>
+             <li>History, </li>
+             <li>Ethics, </li>
+           </ul>
+          </li>
+          </ul>
+            </div>
+
+            <div class="description">
+
+              <div class="">
+                <div class="twohOnediv">
+                  <h2 class="fontsizeofh1">Sample Article</h2>
+                  <h2 class="fontsizeofh2">Write your Subtitle</h2>
+                </div>
+                <div class="deletediv">
+                  <span>
+                    <a ><i class="fas fa-trash-alt fa-lg "></i></a>
+                  </span>
+                </div>
+              </div>
+
+              <!-- <hr class="greenline"> -->
+              <p class="greenline"></p>
+                <h6 class="descriptionOpacity">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting
+                   industry. Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley of type
+                     and scrambled it to make
+                </h6>
+              <div class="bottomdesc">
+                <div class="inline aa"><a data-modal="#Model1" class="modal__trigger" >Read More »» </a></div>
+                <div class="inline bb ">Posted: 6:00 pm</div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <!-- /////////////////material to display on post popup//////////// -->
+
+          <div id="Model1" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
+            <div class="modal__dialog">
+              <div class="modal__content">
+                <h1 class="postheadingpoup" > Lorem Ipsum </h1>
+                <h3  class="postheadingpoup2"> Neque porro quisquam est qui. </h3>
+                <p class="paracontent">Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                   when an unknown printer took a galley of type and scrambled it to make a type specimen
+                    book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                     remaining essentially unchanged. It was populari</p>
+                <p ><img class="postimage" src="https://unsplash.it/600/300" alt="" /></p>
+                <p class="paracontent">t is a long established fact that a reader will be distracted by
+                   the readable content of a page when looking at its layout. The point of using Lorem
+                   Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+                   'Content here, content here', making it look like readable English. Many desktop publishing
+                    packages and web page editors now use Lorem Ipsum as their default model text, and a search
+                     for 'lorem ipsum' will uncover </p>
+                <p class="paracontent">ontrary to popular belief, Lorem Ipsum is not simply random text. It has
+                   roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                    Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of </p>
+                <a class="nameperson2" ><i class="far fa-user-circle"></i></a>
+                <a  class="modal__close demo-close">
+                  <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+           <!-- ---------------------------------------------------------------------------------------- -->
+
+
+
+    <% for(var i=0;i<posts.length; i++){ %>
+
+
+
+    <div class=" col-md-6 col-sm-6 ">
+      <div class="blog-card float">
+        <div class="meta">
+        <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+          <ul class="details">
+          <div class="namdandprofile" >
+          <div class="tempouta"><h3 class="nameperson"><i class="fas fa-at fa-sm"></i> Article : <%= i+1 %></h3></div>
+          <div class="tempoutb"><img  class="temp" src="data:image/jpeg;base64,<%=posts[i].imgdata.toString('base64')%>" alt=""></div>
+            </div>
+          <li class="author"><span class="postcardtags"><i class="fas fa-user"></i></span> <%= posts[i].name %></li>
+          <li class="date"><span class="postcardtags"><i class="fas fa-calendar-week"></i></span> <%= posts[i].date %> </li>
+          <li class="tags">
+          <ul>
+          <span class="postcardtags"><i class="fas fa-tag"></i></span>
+           <% for(var j=1;j<posts[i].tags.length; j++){ %>
+            <li><%= posts[i].tags[j] %>, </li>
+            <% } %>
+            </ul>
+            </li>
+            </ul>
+            </div>
+
+                                  <div class="description">
+                                    <div class="">
+                                      <div class="twohOnediv">
+                                        <h2 class="fontsizeofh1">
+                                        <%  if(posts[i].mainHeading.length > 22){ %>
+                                          <%= posts[i].mainHeading.substr(0, 22) %>..
+                                          <% } else { %>
+                                               <%= posts[i].mainHeading %>
+                                          <% } %>
+
+                                        </h2>
+                                        <h2 class="fontsizeofh2">
+                                          <%  if(posts[i].subHeading.length > 20){ %>
+                                            <%= posts[i].subHeading.substr(0, 20) %>...
+                                            <% } else { %>
+                                                 <%= posts[i].subHeading %>
+                                            <% } %>
+
+                                        </h2>
+                                      </div>
+                                      <div class="deletediv">
+                                        <span>
+                                          <a  href="/myArticles/<%= posts[i].accountId %>/<%= posts[i]._id %>"><i class="fas fa-trash-alt fa-lg "></i></a>
+                                        </span>
+                                      </div>
+                                    </div>
+
+                                    <!-- <hr class="greenline"> -->
+                                    <p class="greenline"></p>
+                                      <h6 class="descriptionOpacity">
+                                        <%=posts[i].paraOne.substr(0, 240)%>....
+                                      </h6>
+                                    <div class="bottomdesc">
+                                      <div class="inline aa"><a data-modal="#<%= posts[i]._id %>" class="modal__trigger" >Read More »» </a></div>
+                                      <div class="inline bb ">Posted: <%= posts[i].time %></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+
+                                <!-- /////////////////material to display on post popup//////////// -->
+
+                                <div id="<%= posts[i]._id %>" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
+                                  <div class="modal__dialog">
+                                    <div class="modal__content">
+                                      <h1 class="postheadingpoup" ><%= posts[i].mainHeading %></h1>
+                                      <h3  class="postheadingpoup2"><%= posts[i].subHeading %></h3>
+                                      <p class="paracontent"><%= posts[i].paraOne %></p>
+                                      <p ><img class="postimage" src="https://unsplash.it/600/300" alt="" /></p>
+                                      <p class="paracontent">
+                                        <% if (posts[i].paraTwo !="") %>
+                                        <%= posts[i].paraTwo %>
+                                      </p>
+                                      <p class="paracontent">
+                                        <% if (posts[i].paraThree !="") %>
+                                        <%= posts[i].paraThree %>
+                                      </p>
+                                      <a class="nameperson2" ><i class="far fa-user-circle"></i></a>
+                                      <a  class="modal__close demo-close">
+                                        <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+
+  <!-- ----------------------------------------------------------------------------------------------------- -->
+        <%} %>
+
+
+             </div>
+           </div>
+           <div id = "rightbox">
+             <div class="verticletagdivright2">
+             </div>
+           </div>
+</div>
+</div>
+
+
+<div class="marginbottmset">
+<div class="leftBottombox">
+    <a href="#" class="editButtons"><span  ><i class="fas fa-arrow-left fa-2x"></i></span></a>
+</div>
+<div class="middleBottombox">
+     <div class="middleBottomboxinside"> </div>
+</div>
+<div class="rightBottombox">
+   <a href="#" class="saveButtons"><span  ><i class="fas fa-arrow-right fa-2x"></i></span></a>
+</div>
+</div>
+<!-- /////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+</section>
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+
+ <i class=" footer_icon fab fa-facebook-f "></i>
+ <i class=" footer_icon fab fa-instagram"></i>
+ <i class=" footer_icon fab fa-twitter"></i>
+ <i class=" footer_icon fas fa-envelope-square"></i>
+   <p>© Copyright 2020 byAmir</p>
+</footer>
+</body>
+</html>
+
+<!-- ////////////////////////////////// Pop Script /////////////////////////////////////////// -->
+
+<script type="text/javascript">
+  var Modal = (function() {
+
+    var trigger = $qsa('.modal__trigger'); // what you click to activate the modal
+    var modals = $qsa('.modal'); // the entire modal (takes up entire window)
+    var modalsbg = $qsa('.modal__bg'); // the entire modal (takes up entire window)
+    var content = $qsa('.modal__content'); // the inner content of the modal
+  	var closers = $qsa('.modal__close'); // an element used to close the modal
+    var w = window;
+    var isOpen = false;
+  	var contentDelay = 40; // duration after you click the button and wait for the content to show
+    var len = trigger.length;
+
+    function $qsa(el) {
+      return document.querySelectorAll(el);
+    }
+
+    var getId = function(event) {
+
+      event.preventDefault();
+      var self = this;
+      var modalId = self.dataset.modal;
+      var len = modalId.length;
+      var modalIdTrimmed = modalId.substring(1, len);
+      var modal = document.getElementById(modalIdTrimmed);
+      makeDiv(self, modal);
+    };
+
+    var makeDiv = function(self, modal) {
+      var fakediv = document.getElementById('modal__temp');
+      if (fakediv === null) {
+        var div = document.createElement('div');
+        div.id = 'modal__temp';
+        self.appendChild(div);
+        moveTrig(self, modal, div);
+      }
+    };
+
+    var moveTrig = function(trig, modal, div) {
+      var trigProps = trig.getBoundingClientRect();
+      var m = modal;
+
+
+  		window.setTimeout(function() {
+  			window.requestAnimationFrame(function() {
+  				open(m, div);
+  			});
+  		}, 1);
+
+    };
+
+    var open = function(m, div) {
+
+      if (!isOpen) {
+        var content = m.querySelector('.modal__content');
+        m.classList.add('modal--active');
+        content.classList.add('modal__content--active');
+        content.addEventListener('transitionend', hideDiv, false);
+        isOpen = true;
+      }
+
+      function hideDiv() {
+        div.style.opacity = '0';
+        content.removeEventListener('transitionend', hideDiv, false);
+      }
+    };
+
+    var close = function(event) {
+
+  		event.preventDefault();
+      event.stopImmediatePropagation();
+
+      var target = event.target;
+      var div = document.getElementById('modal__temp');
+      if (isOpen && target.classList.contains('modal__bg') || target.classList.contains('modal__close')) {
+        div.style.opacity = '1';
+        div.removeAttribute('style');
+
+  			for (var i = 0; i < len; i++) {
+  				modals[i].classList.remove('modal--active');
+  				content[i].classList.remove('modal__content--active');
+  				trigger[i].style.transform = 'none';
+          trigger[i].style.webkitTransform = 'none';
+  				trigger[i].classList.remove('modal__trigger--active');
+  			}
+
+  			div.addEventListener('transitionend', removeDiv, false);
+        isOpen = false;
+
+      }
+
+      function removeDiv() {
+        setTimeout(function() {
+          window.requestAnimationFrame(function() {
+            // remove the temp div from the dom with a slight delay so the animation looks good
+            div.remove();
+          });
+        }, 10);
+      }
+
+    };
+
+    var bindActions = function() {
+      for (var i = 0; i < len; i++) {
+        trigger[i].addEventListener('click', getId, false);
+        closers[i].addEventListener('click', close, false);
+        modalsbg[i].addEventListener('click', close, false);
+      }
+    };
+
+    var init = function() {
+      bindActions();
+    };
+
+    return {
+      init: init
+    };
+
+  }());
+
+  Modal.init();
+
+</script>

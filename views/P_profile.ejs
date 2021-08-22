@@ -1,0 +1,356 @@
+<%  var a=''; %>
+<% if(check==false) a='R'%>
+<%- include('partials/'+a+'Header') -%>
+
+<!-- style sheet css -->
+<link rel="stylesheet"  href="/css/zProfile.css" type="text/css">
+
+<!-- //////////////////////////////////////////content/////////////////////////////////////// -->
+
+
+<section id="title">
+
+ <div class="headerr">
+   <div class="row">
+     <div class="col-lg-6 furrdiv"><img src="/images/panda.png" class="imagefurr"alt=""></div>
+     <div class="col-lg-6  titlemain2" ><h1 class="titlemain" >Manage your Profile...</h1></div>
+   </div>
+ </div>
+</section>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+   <section class="profile">
+
+     <form  action="/profile/<%= profile._id %>" method="POST" id="myform" enctype="multipart/form-data" >
+
+     <div class="profileShowdiv"></div>
+     <div class="profilediv">
+
+       <!-- image div -->
+       <div class="picdiv">
+            <div class="piccc"><img class="specialPicTwo" src="data:image/jpeg;base64,<%=profile.imgdata.toString('base64')%>"></div>
+       </div>
+
+      <!-- form div with 3 box -->
+       <div class="">
+         <div id = "boxes">
+
+                     <div id = "leftbox">
+                       <div class="verticletagdivleft2">
+                       </div>
+                     </div>
+
+                     <div id = "middlebox">
+
+                       <div class="MainForm">
+
+                            <h2 class="headingpublish"><i class="fas fa-pen-fancy fa-sm"></i> Profile Details</h2>
+                            <div id="set1" class="form-text blackinfo " >Enter the Subtitle of Article (mendatory) </div>
+
+                              <!-- first Name -->
+                               <div class="row g-3 align-items-center marginzero">
+                                 <div class="col-auto labelwidth">
+                                   <label for="inputPassword6" class="col-form-label" >First Name :</label>
+                                 </div>
+                                 <div class="col-auto textfieldwidth ">
+                                   <input name="fname"  type="text" id="in1" value="<%= profile.fName %>" class="form-control commonborderRadii inputa widthfields" aria-describedby="passwordHelpInline" required>
+
+                                 </div>
+                               </div>
+                             <!-- Last Name -->
+                               <div class="row g-3 align-items-center marginzero">
+                                 <div class="col-auto labelwidth">
+                                   <label for="inputPassword6" class="col-form-label" >Last Name :</label>
+                                 </div>
+                                 <div class="col-auto textfieldwidth">
+                                   <input  name="lname" type="text" id="in2" value="<%= profile.lName %>" class="form-control commonborderRadii inputa widthfields" aria-describedby="passwordHelpInline" required>
+                                 </div>
+                               </div>
+                             <!-- Emial -->
+                               <div class="row g-3 align-items-center marginzero">
+                                 <div class="col-auto labelwidth">
+                                   <label for="inputPassword6" class="col-form-label">Email :</label>
+                                 </div>
+                                 <div class="col-auto textfieldwidth">
+                                   <input name="email" type="email" id="in3" value="<%= profile.email %>"class="form-control commonborderRadii inputa widthfields" aria-describedby="passwordHelpInline" required>
+                                 </div>
+                               </div>
+                               <!-- BirthDay -->
+                                 <div class="row g-3 align-items-center marginzero">
+                                   <div class="col-auto labelwidth">
+                                     <label for="inputPassword6" class="col-form-label" >Birthday :</label>
+                                   </div>
+                                   <div class="col-auto textfieldwidth">
+                                     <input name="birthday" type="date" value="<%= profile.birthDay %>" id="in4" class="form-control commonborderRadii  inputa widthfields" aria-describedby="passwordHelpInline" required>
+                                   </div>
+                                 </div>
+                               <!-- occupation -->
+                                 <div class="row g-3 align-items-center marginzero">
+                                   <div class="col-auto labelwidth">
+                                     <label for="inputPassword6" class="col-form-label">Occupation :</label>
+                                   </div>
+                                   <div class="col-auto textfieldwidth">
+                                     <input name="occupation" type="text" id="in5"value="<%= profile.occupation %>" class="form-control commonborderRadii inputa widthfields" aria-describedby="passwordHelpInline" required>
+                                   </div>
+                                 </div>
+
+                                 <!-- country -->
+                                   <div class="row g-3 align-items-center marginzero">
+                                     <div class="col-auto labelwidth">
+                                       <label for="inputPassword6" class="col-form-label" >Country :</label>
+                                     </div>
+                                     <div class="col-auto textfieldwidth">
+                                       <input name="country" type="text" id="in6" value="<%= profile.country %>" class="form-control commonborderRadii inputa widthfields" aria-describedby="passwordHelpInline" required>
+                                     </div>
+                                   </div>
+
+                                   <!-- city -->
+                                     <div class="row g-3 align-items-center marginzero">
+                                       <div class="col-auto labelwidth">
+                                         <label for="inputPassword6" class="col-form-label" >City :</label>
+                                       </div>
+                                       <div class="col-auto textfieldwidth">
+                                         <input name="city" type="text" id="in7" value="<%= profile.city %>"class="form-control commonborderRadii  inputa widthfields" aria-describedby="passwordHelpInline" required>
+                                       </div>
+                                     </div>
+
+
+                            <!-- bio or description -->
+                            <div class="row g-3 align-items-center marginzero">
+                              <div class="col-auto labelwidth">
+                                <label for="inputPassword6" class="col-form-label">Bio :</label>
+                              </div>
+                              <div class="col-auto textfieldwidth">
+                                <div class="form-floating">
+                                  <textarea name="bio" id="in8"  class="form-control commonborderRadii2 inputa widthfields" placeholder="Leave a comment here" style="height: 100px" required><%= profile.bio %></textarea>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+                            <!-- gender -->
+                               <div class="row g-3 align-items-center marginzero">
+                                 <div class="col-auto ">
+                                   <label for="inputPassword6" class="col-form-label" >Gender :</label>
+                                 </div>
+                                 <div class="col-auto ">
+                                   <div class="dropdown Rgender">
+                                     <input type="hidden" id="hiddenInput" name="gender" value="Male">
+                                     <button   id="gender" class="btn btn-outline-secondary dropdown-toggle  Rsd" style="color:black;" type="button" data-bs-toggle="dropdown" aria-expanded="false"><%= profile.gender %></button>
+                                     <ul class="dropdown-menu dropdown-menu-light " aria-labelledby="dropdownMenuButton2">
+                                       <li><a  id="male" class="dropdown-item Rsd" >Male</a></li>
+                                       <li><a  id="female" class="dropdown-item Rsd" >Female</a></li>
+                                       <li><a  id="others" class="dropdown-item Rsd" >Others</a></li>
+                                     </ul>
+                                   </div>
+                                 </div>
+                               </div>
+
+                           <!-- choose file input   -->
+                             <div class="row g-3 align-items-center marginzero">
+                               <div class="col-auto labelwidth">
+                                 <div class="form-check">
+                                   <input id="checkbox"  class="form-check-input" name="checkbox" type="checkbox" value="notChecked" >
+                                   <label class="form-check-label" for="flexCheckDefault">
+                                     Change Dp
+                                   </label>
+                                 </div>
+                               </div>
+                               <div class="col-auto textfieldwidth">
+                                 <div class="mb-3">
+                                   <input name="image" id="tohide" class="form-control" type="file">
+                                 </div>
+                               </div>
+                             </div>
+
+
+
+                           <button type="submit"  style="display: none;" id="mybtn" ></button>
+
+                       </div>
+                     </div>
+
+                     <div id = "rightbox">
+                       <div class="verticletagdivright2">
+                       </div>
+                     </div>
+        </div>
+       </div>
+
+      <!-- bottom div with 3 box -->
+       <div class="marginbottmset">
+         <div class="leftBottombox">
+              <a  type="button" id="extraclass" onClick="return myfunction()"class="editButtons"><span  ><i class="far fa-edit fa-2x"></i></span></a>
+         </div>
+         <div class="middleBottombox">
+               <div class="middleBottomboxinside"> </div>
+         </div>
+         <div class="rightBottombox">
+             <a  class="saveButtons" id="submitbtn" type="submit" onclick="return myfunction2()"><span  ><i class="far fa-save fa-2x"></i></span></a>
+         </div>
+       </div>
+
+     </div>
+          </form>
+   </section>
+
+
+
+
+  <!-- Footer -->
+  <footer id="footer">
+
+
+    <i class=" footer_icon fab fa-facebook-f "></i>
+    <i class=" footer_icon fab fa-instagram"></i>
+    <i class=" footer_icon fab fa-twitter"></i>
+    <i class=" footer_icon fas fa-envelope-square"></i>
+      <p>© Copyright 2020 byAmir</p>
+
+
+  </footer>
+
+</body>
+</html>
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+<!-- addition jquery/// -->
+  <!-- <script src="/js/Jprofile.js" charset="utf-8"></script> -->
+  <script type="text/javascript">
+    var bool=true;
+    var boolhide=true;
+    $("input").prop('disabled', true);
+    $("textarea").prop('disabled', true);
+    $("gender").prop('disabled', true);
+    $("#tohide").hide();
+    ///label for editing///
+    $("#set1").text("Press Edit button to Enable Editting !");
+    $("#set1").css({ 'color': 'purple'});
+
+
+   function myfunction(){
+
+        if(bool==false){
+
+          // $("#in1").val("Enter the Main title");
+          $("input").prop('disabled', true);
+          $("textarea").prop('disabled', true);
+          $("button").prop('disabled', true);
+          bool=true;
+          $("#extraclass").removeClass("onpress");
+
+
+
+        }
+        else {
+          // $("#in1").val("Enter the Main title");
+          $("input").prop('disabled', false);
+          $("textarea").prop('disabled', false);
+          $("button").prop('disabled', false);
+          bool=false;
+          $("#extraclass").addClass("onpress");
+          ///label for editing///
+          $("#set1").text("Press Save button to save Changes!");
+          $("#set1").css({ 'color': 'purple'});
+
+
+        }
+        return false;
+   }
+
+
+    $(document).ready(function() {
+
+       $("#male").click(function() {$("#gender").text("Male");$("#hiddenInput").val("Male");});
+         $("#female").click(function() { $("#gender").text("Female");$("#hiddenInput").val("Female");});
+           $("#others").click(function() { $("#gender").text("Others");$("#hiddenInput").val("Others");});
+             $("#submitbtn").click(function() { $("#mybtn").click();});
+
+      $("#checkbox").click(function() {
+        if(boolhide==false){
+          $("#tohide").hide();
+          boolhide=true;
+
+        }
+        else {
+         $("#tohide").show();
+         boolhide=false;
+         $("#checkbox").val("Checked");
+       }
+
+
+      });
+
+    });
+
+
+   function myfunction2(){
+
+     var Fname=$("#in1").val();
+     var Lname=$("#in2").val();
+     var Email=$("#in3").val();
+     var BirthDay=$("#in4").val();
+     var Occupation=$("#in5").val();
+     var Country=$("#in6").val();
+     var City=$("#in7").val();
+     var Bio=$("#in8").val();
+     var Gender=$("#gender").text();
+
+
+     if(Fname=="" ){
+       $("#set1").text("First Name can't be Empty !");
+       $("#set1").css({ 'color': 'red'});
+     }
+     else if( Fname.length > 15){
+       $("#set1").text("First Name is too long !");
+       $("#set1").css({ 'color': 'red'});
+     }
+     else if(Lname=="" ){
+       $("#set1").text("Last Name can't be Empty !");
+       $("#set1").css({ 'color': 'red'});
+     }
+     else if( Email ==""){
+       $("#set1").text("Email cant be NUll !");
+       $("#set1").css({ 'color': 'red'});
+     }
+     else if(BirthDay==""){
+       $("#set1").text("Birthday cant be NUll !");
+       $("#set1").css({ 'color': 'red'});
+     }
+     else if(Occupation==""){
+       $("#set1").text("Occupation field cant be Empty !");
+       $("#set1").css({ 'color': 'red'});
+     }
+     else if(Country==""){
+       $("#set1").text("Please Enter the Country you live In !");
+       $("#set1").css({ 'color': 'red'});
+     }
+     else if(City==""){
+       $("#set1").text("City field cant be Empty !");
+       $("#set1").css({ 'color': 'red'});
+     }
+     else if(Bio== ""){
+       $("#set1").text("Please Enter the Bio !");
+       $("#set1").css({ 'color': 'red'});
+     }
+     else if( Bio.length > 100){
+       $("#set1").text("Bio is too long, make it a little short !");
+       $("#set1").css({ 'color': 'red'});
+     }
+     else if(Gender=="Gender"){
+       $("#set1").text("Select the Gender !");
+       $("#set1").css({ 'color': 'red'});
+     }
+     else{
+       $("#set1").text("Profile Updated Successfully");
+       $("#set1").css({ 'color': 'Green'});
+
+     }
+
+
+     };
+
+  </script>

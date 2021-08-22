@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Article-Press</title>
+  <link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
+  <!-- /////////////////////////for icons imported////////// -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+  <!-- ///////////////font family/////////////// -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500&display=swap" rel="stylesheet">
+  <!-- ////bootstrap cdn links///////// -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <!-- style sheet css -->
+  <link rel="stylesheet"  href="/css/RHeader.css" type="text/css">
+  <!-- ///jquary filr -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://leanmodal.finelysliced.com.au/js/jquery.leanModal.min.js"></script>
+
+
+
+</head>
+<body>
+
+<nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div class="">
+    <a id="modal_trigger" class="loginpop" href="#modal" > <button type="button" class="btn btn-success loginbuttonmargin RnavHeight "><b> Log In</b></button></a>
+    <a onclick="return signupfn()" class="loginpop" href="#modal" > <button type="button" class="btn btn-outline-warning SignUpbuttonmargin  RnavHeight"><b> SignUp</b></button></a>
+    </div>
+
+<!-- //////////////////////////////login window start/////////////////////////////////// -->
+    <div id="modal" class="popupContainer" style="display:none;">
+       <header class="popupHeader">
+        <span> Login</span>
+        <span class="modal_close"><i class="fa fa-times"></i></span>
+      </header>
+
+      <section class="popupBody">
+
+        <!-- login screen/////////////////////////////// -->
+      <div class="social_login">
+           <div class="mb">
+               <a href="#" class="social_box google">
+              <span class="icon"><i class="fab fa-google"></i></span>
+                 <span class="icon_title">Connect with Google</span>
+               </a>
+          </div>
+
+
+          <form  action="/login" method="post">
+
+        <div class="mb-3 RspMargin">
+              <label for="exampleInputEmail1" class="form-label labela">Email address</label>
+              <input type="email" name="email" id="reqField1" class="form-control inputa" required>
+            </div>
+            <div class="mb-3 RspMargin">
+              <label for="exampleInputPassword1"  class="form-label labela">Password</label>
+              <input type="password" name="pass"  id="reqField2" class="form-control inputa" required>
+              <span class="forgot_password labela" id="showNotif" style="display:none">Fields cant be Empty....</span>
+            </div>
+            <a href="#" class="forgot_password labela">Forgot password?</a>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary labela Rbutton"  id="loginBtn" type="submit">Log in</button>
+              <button class="btn btn-success labela Rbutton" id="register_form" type="button">Sign up </button>
+            </div>
+          </form>
+     </div>
+
+        <!-- Register Form //////////////////////////////////////////// -->
+        <div class="user_register">
+
+    <form class="" action="/registration" method="post">
+
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label labela">First Name</label>
+              <input type="text" id="f1" name="fname" class="form-control inputa"  placeholder="example:  Naveed " required >
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label labela"> Last Name</label>
+              <input type="text" id="f2" name="lname" class="form-control inputa "   placeholder="example:  Aamir" required >
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label labela">Email</label>
+              <input type="email" id="f3" name="email"class="form-control inputa "  placeholder="abc@xyz.com"  required>
+              <span class="forgot_password inputa" id="showNotif2" style="display:none">Fields cant be empty !</span>
+
+            </div>
+
+             <div class="btndiv">
+               <button class="btn btn-outline-danger back_btn btnpadleft labela" type="button">Back</button>
+               <button class="btn btn-outline-success btnpadright labela" id="nextform" type="button">Next </button>
+             </div>
+
+
+
+        </div>
+
+        <!-- /////////////////newfrom//////////// -->
+
+        <div  class="newform" style="display:none;" >
+
+
+            <div class="dropdown mb-3">
+              <div class="dropdown">
+                <input type="hidden" id="hiddenInput" name="gender" value="Male">
+                <button   id="gender" class="btn btn-outline-secondary dropdown-toggle  labela" style="color:black;" type="button" data-bs-toggle="dropdown" >Gender</button>
+                <ul class="dropdown-menu dropdown-menu-light ">
+                  <li><a  id="male" class="dropdown-item inputa" >Male</a></li>
+                  <li><a  id="female" class="dropdown-item inputa" >Female</a></li>
+                  <li><a  id="others" class="dropdown-item inputa" >Others</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label labela">Occupation</label>
+              <input type="text" id="f4" name="occup"class="form-control inputa"  placeholder="ex. Engineer" required >
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label labela">Password</label>
+              <input type="password" id="f5" name="pass1"class="form-control inputa"  placeholder="@include special character" required >
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label labela"> Confirm Password</label>
+              <input type="password" id="f6" name="pass2" class="form-control inputa" placeholder="@confirm password" required>
+              <span class="forgot_password inputa" id="showNotif3" style="display:none">Fields cant be empty !</span>
+            </div>
+
+
+              <div class="btndiv">
+                <button class="btn btn-outline-danger back_btn btnpadleft labela" type="button">Back</button>
+                <button class="btn btn-success btnpadright labela" id="registerBtn " type="submit">Register </button>
+              </div>
+
+
+
+    </form>
+
+        </div>
+
+      </section>
+
+    </div>
+<!-- /////////////////////////////////////login close/////////////////////////// -->
+
+
+<div class="timediv timelineone  " >
+  <ul class="timeul">
+    <li class="time " style="color:orange; margin-right:5px;" ><span id="days" class="Rfontsize"></span></li>
+    <li class="time "><span id="hours" class=""></span></li>
+    <li class="time "><span id="minutes" class=""></span></li>
+    <li class="time "><span id="seconds" class=""></span></li>
+  </ul>
+</div>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon Rbutn"></span>
+    </button>
+    <!-- //////// -->
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <div>
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 500px;">
+        <li><hr class="divider"></li>
+        <li class="nav-item hoverpop">
+          <a class="nav-link " id="a"   href="/"><b>Home</b></a>
+        </li>
+        <li class="nav-item hoverpop">
+          <a class="nav-link "id="b"   href="/articles/1"  ><b>Articles</b></a>
+        </li>
+        <li class="nav-item hoverpop">
+          <a class="nav-link" id="c" href="/"   ><b>About</b></a>
+        </li>
+        <li class="nav-item hoverpop">
+          <a class="nav-link"  id="d" href="" ><b>Publish</b></a>
+        </li>
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <b>Tags</b>
+          </a>
+          <ul  class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item searchtag" href="#">Academic disciplines‎</a></li>
+            <li><a class="dropdown-item searchtag" href="#">Business‎</a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Chronology‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Concepts‎</a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Culture‎ </a></li>
+            <li><a class="dropdown-item searchtag" href="#">Discipline‎</a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Economy‎</a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Education‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Engineering‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Entertainment‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Ethics‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Events‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Food and drink‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Geography‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Government‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Health‎</a></li>
+            <li><a class="dropdown-item searchtag"  href="#">History‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Human nature‎</a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Humanities‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Language‎</a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Law‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Mathematics‎</a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Military‎</a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Music‎ </a></li>
+
+            <li><a class="dropdown-item searchtag"  href="#">Nature‎  </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">People‎  </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Philosophy‎  </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Policy‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Politics‎  </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Religion‎  </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Science</a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Technology‎  </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Society‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Sports‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">Universe‎ </a></li>
+            <li><a class="dropdown-item searchtag"  href="#">World‎ </a></li>
+
+          </ul>
+        </li>
+        <li><hr class="divider"></li>
+      </ul>
+    </div>
+
+
+      <div class="timediv timelinetwo " >
+          <ul class="timeul">
+            <li class="time" style="color:orange; margin-right:5px;"><span id="days2"></span></li>
+            <li class="time" ><span id="hours2"></span></li>
+            <li class="time"><span id="minutes2"></span></li>
+            <li class="time"><span id="seconds2"></span></li>
+          </ul>
+
+      </div>
+
+
+      <div class="temepaturediv">
+        <div class="cloudhover"><img class="iconsizeI" src="<%=imageurl %>" ></div>
+        <div class="temptext "><h6 class="Rcourheading"><%= city  %> : <%= temp  %> °C </h6></div>
+      </div>
+
+    </div>
+    </div>
+</nav>
+
+<!-- ////////////////////////////////////////////////// -->
+<!-- <script src="/js/time.js" ></script> -->
+<script type="text/javascript">
+  (function () {
+
+        x = setInterval(function() {
+
+          let day = new Date().getDay();
+          var hour=new Date().getHours();
+          var mint=new Date().getMinutes();
+          var sec=new Date().getSeconds();
+
+          if(sec<10 ){
+            sec="0"+sec;
+          }
+          if(hour<10){
+            hour="0"+hour;
+          }
+          if(mint<10){
+            mint="0"+mint;
+          }
+
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+
+            var n = weekday[day];
+
+            document.getElementById("days").innerText = n+"  ",
+            document.getElementById("hours").innerText =hour+" :",
+            document.getElementById("minutes").innerText = mint+" :",
+            document.getElementById("seconds").innerText = sec;
+
+            document.getElementById("days2").innerText = n+"  ",
+            document.getElementById("hours2").innerText =hour+" :",
+            document.getElementById("minutes2").innerText = mint+" :",
+            document.getElementById("seconds2").innerText = sec;
+
+        }, 1000)
+    }());
+</script>
+
+<!-- <script src="/js/loginjs.js" charset="utf-8"></script> -->
+<script type="text/javascript">
+// Plugin options and our code
+var valid=false;
+$("#modal_trigger").leanModal({
+  top: 100,
+  overlay: 0.8,
+  closeButton: ".modal_close"
+});
+
+$(function () {
+
+  // Calling Register Form
+  $("#register_form").click(function () {
+    $(".social_login").hide();
+    $(".newform").hide();
+    $(".user_register").show();
+    $(".header_title").text("Register");
+    return false;
+  });
+
+///////functionon for final user registerBtn////////////////
+  $("#registerBtn").click(function () {
+    var v1=$("#f4").val();
+    var p1=$("#f5").val();
+    var p2=$("#f6").val();
+
+    if( v1.length >3 && p1.length >3 && p2.length >3){
+
+        $("#showNotif3").css("display","none");
+
+        if(p1!=p2){ $("#showNotif3").css("display","block");
+                    $("#showNotif3").text("password  are not same..");
+                    $("#showNotif3").css("color","red");
+                    return false}
+        else if(p1==p2) {return true;}
+      }
+    else { $("#showNotif3").text("Fields cant be empty !");
+           $("#showNotif3").css("display","block");
+           $("#showNotif3").css("color","red");
+           return false;}
+
+  });
+
+
+  //////////////////config for first  page of regis tration/////////////////////
+  $("#nextform").click( function () {
+
+    var v1=$("#f1").val();
+    var v2=$("#f2").val();
+    var v3=$("#f3").val();
+
+    if( v1.length >3 && v2.length >3 && v3.length >3 && valid){
+
+      $(".user_register").hide();
+      $(".newform").show();
+      $(".header_title").text("Register");
+      $("#showNotif2").css("display","none");
+      return false;
+    }
+    else if (v1.length >3 && v2.length >3 && v3.length >3 && valid==false){
+      $("#showNotif2").text("Already register (email)")
+      $("#showNotif2").css("display","block");
+      $("#showNotif2").css("color","red");
+     }
+    else{
+       $("#showNotif2").text("Fields Can't be Empty..");
+       $("#showNotif2").css("display","block");
+       $("#showNotif2").css("color","red");
+       return false;
+     }
+  });
+
+  // Going back to Social Forms  or config of back button/////////
+  $(".back_btn").click(function () {
+    $(".user_register").hide();
+    $(".social_login").show();
+    $(".newform").hide();
+    $(".header_title").text("Login");
+    return false;
+  });
+});
+
+
+
+$( document ).ready(function() {
+
+  $("#f3").keyup( async function() {
+
+    // -----------------------------------------------------
+             var n=$(this).val();
+             const resp = await fetch('/check/'+n);
+             const data = await resp.json();
+
+             if(data.check == "true"){
+               $("#showNotif2").text("Already register (email)")
+               $("#showNotif2").css("display","block");
+               $("#showNotif2").css("color","red");
+               valid=false;
+             }
+             else if(data.check == "false"){
+                $("#showNotif2").css("display","block");
+                $("#showNotif2").text("Available");
+                $("#showNotif2").css("color","green");
+                valid=true;
+             }
+
+    // ------------------------------------------------------
+
+  });
+});
+</script>
+
+<!-- <script src="/Js/Jheader.js" charset="utf-8"></script> -->
+<script type="text/javascript">
+
+ async function getId(){
+
+       const response = await fetch('/api');
+       const data = await response.json();
+       const id = data.accntID;
+       const name=data.name;
+
+   if(id!="" && name!=""){
+          $("#dropdownMenu2").text(name);
+          $("#d").attr("href", "/publish/"+id);
+          $("#accountHref").attr("href", "/account/"+id);
+          $("#profileHref").attr("href", "/profile/"+id);
+          $("#myArticlesHref").attr("href", "/myArticles/"+id);
+   }
+ };
+
+getId();
+
+$("#loginBtn").click(function(){
+
+  var val1=$("#reqField1").val();
+  var val2=$("#reqField2").val();
+
+  if(val1.length >3 && val2.length >3 ){
+       $("#showNotif").css("display","none");
+       setTimeout(function(){
+               $("#showNotif").css("display","block");
+               $("#showNotif").text("Credentials Are Wrong...");
+                                   setTimeout(function(){
+                                   window.location.reload();}, 1000);}, 6000);  }
+
+   else{ $("#showNotif").css("display","block");
+         return false;}
+
+});
+
+function signupfn(){  $("#modal_trigger").click();}
+
+$("#male").click(function() {$("#gender").text("Male");$("#hiddenInput").val("Male");});
+$("#female").click(function() { $("#gender").text("Female");$("#hiddenInput").val("Female");});
+$("#others").click(function() { $("#gender").text("Others");$("#hiddenInput").val("Others");});
+
+
+//////////////////////add event listerer to all li in tag list//////////////
+
+for(var i=0;i<document.querySelectorAll(".searchtag").length;i++)
+document.querySelectorAll(".searchtag")[i].addEventListener("click",getClicked);
+
+function getClicked(){
+          var liClicked=this.innerHTML;
+          window.location.href = '/search/tags/'+liClicked; }
+
+</script>

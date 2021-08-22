@@ -1,0 +1,372 @@
+<%  var a=''; %>
+<% if(check==false) a='R'%>
+<%- include('partials/'+a+'Header') -%>
+
+<!-- style sheet css -->
+<link rel="stylesheet"  href="/css/zPublish.css" type="text/css">
+
+<!-- /////////////////////////////////////////content////////////////////////////////////// -->
+
+
+<section id="title">
+
+<div class="headerr">
+ <div class="row">
+   <div class="col-lg-6 furrdiv"><img src="/images/fur2.png" class="imagefurr"alt=""></div>
+   <div class="col-lg-6  titlemain2" ><h1 class="titlemain" >Compose the Article...</h1></div>
+ </div>
+</div>
+
+
+</section>
+
+<!-- ///////////////////////////////////////////////////////////////////////////post card section////////////////////////////////////////////////////// -->
+
+<section class="composeSection">
+
+<div class="shadowdiv"></div>
+
+<div class="">
+  <div class="composediv inline">
+
+     <form class="" id="PublishFormID" action="/publish/<%= accntID %>" method="post">
+
+    <div class="">
+      <div class="inline formdiv ">
+        <h2 class="headingpublish"><i class="fas fa-pen-fancy fa-sm"></i> Create Content</h2>
+
+         <div class=" mb-3 title12 ">
+           <input type="text" name="mainHeading" class="form-control commonborderRadii inputa " placeholder="Title of Article" id="in1" required>
+           <div id="set1" class="form-text blackinfo " >Enter the Main title of the Article (mendatory) </div>
+         </div>
+
+         <div class="mb-3 title12">
+           <input type="text" name="subHeading" class="form-control commonborderRadii inputa" id="in2" placeholder="Subtitle " required>
+           <div id="set2" class="form-text blackinfo ">Enter the Subtitle of Article (mendatory) </div>
+         </div>
+
+       <div class="row">
+
+         <div class="col-lg-6">
+           <div class=" parawidth ">
+             <textarea  required name="paraOne" class="form-control commonborderRadii2 inputa" style="height:6rem; margin-top:1rem;"  placeholder="Paragraph I" id="in3"></textarea>
+             <div id="set3" class="form-text blackinfo ">Write Paragraph I (mendatory) </div>
+           </div>
+           <div class=" parawidth ">
+             <textarea   name="paraTwo" class="form-control commonborderRadii2 inputa" style="height:6rem; margin-top:1rem;"  placeholder="Paragraph II" id="in4"></textarea>
+             <div id="set4" class="form-text blackinfo ">Write Paragraph II (Optional)</div>
+           </div>
+
+           <div class=" parawidth ">
+             <textarea   name="paraThree" class="form-control commonborderRadii2 inputa" style="height:6rem; margin-top:1rem;" placeholder="Paragraph III" id="in5"></textarea>
+             <div id="set5" class="form-text blackinfo ">Write Paragraph III (Optional)</div>
+           </div></div>
+
+         <div class="col-lg-6 ">
+           <div class="">
+             <div class="selectbox">
+               <div class=" ">
+                 <textarea readonly name="tags" id="in7" class="form-control commonborderRadii4" style="height:6rem; "  placeholder="Add Tags form Taglist... " ></textarea>
+               </div>
+               <div class="">
+                 <select  required id="in6" class="form-select commonborderRadii3 "  size="7" aria-label="size 3 select example">
+                   <option value="1" class="fadeopacity" selected>Academic</option>
+                   <option value="2" class="fadeopacity">Business‎</option>
+                   <option value="3" class="fadeopacity">Chronology‎</option>
+                    <option value="3" class="fadeopacity">Concepts‎</option>
+                     <option value="3" class="fadeopacity">Culture‎</option>
+                     <option value="1" class="fadeopacity">Discipline‎</option>
+                      <option value="3" class="fadeopacity">Economy‎</option>
+                       <option value="3" class="fadeopacity">Education‎</option>
+                        <option value="3" class="fadeopacity">Engineering‎</option>
+                         <option value="3" class="fadeopacity">Entertainment‎</option>
+                          <option value="3" class="fadeopacity">Ethics‎</option>
+                           <option value="3" class="fadeopacity">Events‎</option>
+                            <option value="3" class="fadeopacity">Food and drink‎</option>
+                             <option value="3" class="fadeopacity">Geography‎</option>
+                              <option value="3" class="fadeopacity">Government‎</option>
+                               <option value="3" class="fadeopacity">Health‎</option>
+                                <option value="3" class="fadeopacity">History‎</option>
+                                 <option value="3" class="fadeopacity">Human nature‎</option>
+                                  <option value="3" class="fadeopacity">Humanities‎</option>
+                                   <option value="3" class="fadeopacity">Language‎</option>
+                                    <option value="3" class="fadeopacity">Law‎</option>
+                                     <option value="3" class="fadeopacity">Mathematics‎</option>
+                                      <option value="3" class="fadeopacity">Military‎</option>
+                                       <option value="3" class="fadeopacity">Music‎</option>
+                                        <option value="3" class="fadeopacity">Nature‎</option>
+                                         <option value="3" class="fadeopacity">People‎</option>
+                                          <option value="3" class="fadeopacity">Philosophy‎</option>
+                                           <option value="3" class="fadeopacity">Policy‎</option>
+                                           <option value="3" class="fadeopacity">Politics‎</option>
+                                           <option value="3" class="fadeopacity">Religion‎</option>
+                                           <option value="3" class="fadeopacity">Science‎</option>
+                                           <option value="3" class="fadeopacity">Technology‎</option>
+                                           <option value="3" class="fadeopacity">Society‎</option>
+                                           <option value="3" class="fadeopacity">Sports‎</option>
+                                           <option value="3" class="fadeopacity">Universe‎</option>
+                                           <option value="3" class="fadeopacity">World‎</option>
+
+                    </select>
+                    <a type="button" class="choosebtn1" onclick="return function1()">( <i class="fas fa-plus"></i> )</a>
+                    <a type="button" class="choosebtn2" onclick="return function2()">( <i class="fas fa-minus"></i> )</a>
+                  </div>
+             </div>
+              <div id="set6" class="form-text blackinfo "> Hit plus to Add a Tag (mendatory)</div>
+           </div>
+
+
+         </div>
+       </div>
+
+<!-- //////////////////////////////////////////////// -->
+
+
+       <!-- //////////////////////////////////////////////// -->
+
+        <input type="hidden" id="hiddenTime" name="time" value="">
+         <div class="mb-3 form-check " style="margin-top: 2rem;">
+           <input type="checkbox" class="form-check-input" id="exampleCheck1">
+           <label class="form-check-label" for="exampleCheck1">Send a copy on my mail</label>
+         </div>
+        </div>
+      <div class="inline verticletagdiv "></div>
+    </div>
+
+      <div class="pubishbutnOutterdiv">
+        <div class="  bottompublishbar"></div>
+        <div class="  publishButton">
+          <button type="submit" id="mybtn"  style="display:none;" ></button>
+          <a class="plusButton" id="invokeS" type="button" onclick="return myFunction()"><span  ><i class="fas fa-plus-circle fa-4x"></i></span></a>
+          </div>
+      </div>
+
+  </form>
+</div>
+  <div class="imagecomdiv inline"><img src="/images/pen.png" class="penImage" alt=""></div>
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer id="footer">
+
+
+  <i class=" footer_icon fab fa-facebook-f "></i>
+  <i class=" footer_icon fab fa-instagram"></i>
+  <i class=" footer_icon fab fa-twitter"></i>
+  <i class=" footer_icon fas fa-envelope-square"></i>
+  <p>© Copyright 2020 byAmir</p>
+
+</footer>
+</body>
+</html>
+<!-- /////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- Extra j query pagewise -->
+<!-- <script src="/js/Jpublish.js" charset="utf-8"></script> -->
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+
+// intput one
+    $("#in1").keyup(function() {
+      var n=50-$(this).val().length;
+
+      if(n==50){
+        $("#set1").text("Enter the Main title of the Article (mendatory)");
+        $("#set1").css({ 'color': 'black'});
+      }
+      else if(n<0){
+          $("#set1").text(" Character limit Exceed ( X )");
+          $("#set1").css({ 'color': 'red'});
+      }
+      else if(50-n<10){
+        $("#set1").text(n+ " Characters are left   ");
+        $("#set1").css({ 'color': 'red'});
+      }
+      else{
+        $("#set1").text(n+ " Characters are left   ");
+        $("#set1").css({ 'color': 'green'});
+      }
+
+    });
+
+// intput two
+    $("#in2").keyup(function() {
+      var n=50-$(this).val().length;
+
+      if(n==50){
+        $("#set2").text("Enter the Subtitle of Article (mendatory)");
+        $("#set2").css({ 'color': 'black'});
+      }
+      else if(n<0){
+          $("#set2").text(" Character limit Exceed ( X )");
+          $("#set2").css({ 'color': 'red'});
+      }
+      else if(50-n<10){
+        $("#set2").text(n+ " Characters are left   ");
+        $("#set2").css({ 'color': 'red'});
+      }
+      else{
+        $("#set2").text(n+ " Characters are left   ");
+        $("#set2").css({ 'color': 'green'});
+      }
+    });
+
+// intput three para one
+    $("#in3").keyup(function() {
+      var n=700-$(this).val().length;
+
+      if(n==700){
+        $("#set3").text("Write Paragraph I (mendatory)");
+        $("#set3").css({ 'color': 'black'});
+      }
+      else if(n<0){
+          $("#set3").text(" Character limit Exceed ( X )");
+          $("#set3").css({ 'color': 'red'});
+      }
+      else if(700-n<300){
+        $("#set3").text(n+ " Characters are left   ");
+        $("#set3").css({ 'color': 'red'});
+      }
+      else{
+        $("#set3").text(n+ " Characters are left   ");
+        $("#set3").css({ 'color': 'green'});
+      }
+    });
+
+// intput four para two
+    $("#in4").keyup(function() {
+
+      var n=$(this).val().length;
+      if(n==0){
+        $("#set4").text("Write Paragraph II (Optional)");
+        $("#set4").css({ 'color': 'black'});
+      }
+     else{
+       $("#set4").text("No word Limit..");
+       $("#set4").css({ 'color': 'green'});
+     }
+
+    });
+
+    // intput five para three
+    $("#in5").keyup(function() {
+      var n=$(this).val().length;
+      if(n==0){
+        $("#set5").text("Write Paragraph III (Optional)");
+        $("#set5").css({ 'color': 'black'});
+      }
+     else{
+       $("#set5").text("No word Limit..");
+       $("#set5").css({ 'color': 'green'});
+     }
+    });
+
+  });
+
+/////////for addding tags//////////////
+  function function1(){
+
+      $( "select option:selected" ).each(function() {
+          var str=$("#in7").val();
+          var val=$( this ).text();
+          var no=str.split('#').length
+
+         if(str.search(val)!=-1){
+           $("#set6").text(" Already in Taglist ");
+           $("#set6").css({ 'color': 'red'});
+         }
+         else if(no<=4){
+           $("#in7").text(str+"# "+val+"\n");
+           $("#set6").text(no+" Tag Selected ");
+           $("#set6").css({ 'color': 'green'});
+         }
+         else {
+           $("#in7").text(str+"# "+val+"\n");
+           $("#set6").text(no+" Tag Selected (Max:4) ");
+           $("#set6").css({ 'color': 'red'});
+         }
+
+      });
+  }
+
+////////for removing tags/////////////////////////
+  function function2(){
+
+      $( "select option:selected" ).each(function() {
+
+        var str=$("#in7").val();
+        var val=$( this ).text();
+        var no=str.split('#').length-2;
+
+        if(str.search(val)==-1){
+          $("#set6").text(" Not present in Taglist ");
+          $("#set6").css({ 'color': 'red'});
+        }
+        else {
+          str=str.replace("# "+val+"\n",'');
+          $("#in7").text(str);
+          $("#set6").text(no+" Tag Selected ");
+          if(no <= 4) $("#set6").css({ 'color': 'green'});
+          else $("#set6").css({ 'color': 'red'});
+
+        }
+
+      });
+  }
+
+
+//final checking details and invokeing submit//////////////////////
+  function myFunction() {
+
+        var article=$("#in1").val();
+        var subArticle=$("#in2").val();
+        var para1=$("#in3").val();
+        var para2=$("#in4").val();
+        var para3=$("#in5").val();
+        var tags=$("#in7").val().split('#').length-1;
+
+        if( article.length == 0){alert("Main Title Can't be Empty !");return false}
+        else if( article.length < 10){alert("Main Title is Too Short !");return false}
+        else if(article.length > 50){alert("Main Title is Too Long");return false}
+        else if( subArticle.length == 0){alert("Sub Title Can't be Empty !");return false}
+        else if(subArticle.length > 50){alert("Sub Title  is Too Long");return false}
+        else if( subArticle.length < 10){alert("Sub Title is Too Short !");return false;}
+        else if( para1.length < 300){alert("Paragraph-I is Too Short ! \nJust think about some more stuff..");return false;}
+        else if( para1.length < 300){alert("Paragraph-I Word Limit Exceeded !");return false;}
+        else if(tags == 0){alert(" Bro!...Select atleast ONE tag !");return false;}
+        else if(tags > 4){alert("Maximum of 4 tags are Allowed !");return false;}
+
+////////////if everything all ryt//////////////////
+
+        var hours=new Date().getHours();
+        var minutes=new Date().getMinutes();
+        var ampm = hours >= 12 ? 'pm' : 'am';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = minutes < 10 ? '0'+minutes : minutes;
+        var strTime = hours + ':' + minutes + ' ' + ampm;
+
+        $("#hiddenTime").val(strTime);
+        $("#mybtn").click();
+        return true;
+
+    }
+
+</script>
+
+<!-- ////////////////////////////////////// scrypt for sendting time ////////////////////////// -->
+
+<script type="text/javascript">
+
+</script>
+
+<!-- //////////////////////////////////// to highlight /////////////////////////////////////////// -->
+
+<script type="text/javascript">
+  document.getElementById("d").classList.add("active");
+</script>

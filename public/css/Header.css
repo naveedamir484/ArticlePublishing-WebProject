@@ -1,0 +1,307 @@
+/* change passwor */
+
+.marginBot{
+  margin-bottom: 1rem;
+}
+.btndivCP{
+
+  width:100%;
+}
+.CPdiv{
+margin-top:2rem;
+}
+#lean_overlay {
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    display: none;
+}
+
+.popupContainer {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    left: 45%;
+    top: 60px;
+    background: #FFF;
+    border-radius: 1rem;
+}
+
+.popupHeader {
+    font-size: 16px;
+    text-transform: uppercase;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.popupHeader {
+    background: #F4F4F2;
+    position: relative;
+    padding: 10px 20px;
+    border-bottom: 1px solid #DDD;
+    font-weight: bold;
+}
+
+.popupHeader .modal_close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px 15px;
+    background: #E4E4E2;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 16px;
+    border-radius: 1rem;
+}
+
+.popupBody {
+    padding: 20px;
+}
+
+
+/* change passwod end */
+
+
+
+
+.specialhover :hover{
+  box-shadow: 0 0 7px  white;
+  transform: scale(1.1);
+  color:red;
+}
+.specialhover2 :hover{
+  color:brown;
+}
+
+
+.specialdivPic{
+  border-radius: 3rem;
+}
+.dropdown-menu {
+   max-height:18rem;
+   overflow:scroll;
+}
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+  height:none;
+  background-color: #F5F5F5; }
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: grey;
+}
+
+.specialdivText{
+  background-color: white;
+  height:1.7rem;
+  width:11rem;
+  padding:2px 0 ;
+  margin:auto 1px;
+  position: absolute;
+ top: 19px;
+ left: 46px;
+ border-top-right-radius: 1rem;
+ border-bottom-right-radius: 1rem;
+ font-weight:bold;
+}
+
+
+.specialdiv{
+  display: flex;
+}
+
+.specialPic{
+  height:3.1rem;
+  width: 3.1rem;
+  border-radius: 100%;
+  border: 2px;
+  border-style:solid;
+  border-color: white;
+  position: relative;
+  z-index: 10;
+  margin-right: 11.5rem;
+  background-color: white;
+}
+.timediv{
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+}
+
+.timelineone{
+  display:none;
+}
+
+
+.time {
+  display: inline-block;
+  list-style-type: none;
+  color: #EDF6E5;
+  opacity: .9;
+  margin-bottom:0px;
+
+}
+
+.time span {
+  display: block;
+  font-size: 1.2rem;
+
+}
+
+.timeul{
+  margin-bottom:0px;
+  height:auto;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 1.5rem;
+  font-weight:100;
+
+}
+.divider {
+  border-top: none;
+}
+.hoverpop :hover {
+    transform: scale(1.1);
+    color: #F5E79D;
+}
+
+.cloudhover :hover{
+  transform: scale(1.3);
+}
+
+.temepaturediv{
+  display: flex;
+  justify-content: center;
+}
+.temptext{
+  color:white;
+  padding-top: 1rem;
+  font-size: 1.4rem;
+}
+
+.droptext{
+  text-decoration: none;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 1.1rem;
+  padding-left:1.2rem;
+  color: purple;
+}
+.nav-link
+{
+  font-size: 1.13rem;
+  font-weight: 200;
+  text-align: left;
+
+}
+
+
+.iconsizeI{
+  height: 3.1rem;
+  width: 3.1rem;
+}
+
+/* /////////////////////////////////////////////////////////media section/////////////////////// */
+@media (max-width:994px)
+{
+.divider {border-top: 1px solid silver;}
+
+.timelineone{
+  display:flex;
+}
+.timediv{
+  padding-right:5rem;
+}
+.timelinetwo{
+  display:none;
+}
+/* ///////////////////////////////////////// R changes///////////////////////// */
+.time span {
+  display: block;
+  font-size: 2.7rem;
+
+}
+.Rbutn{
+  font-size: 2.7rem;
+}
+.nav-link
+{
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-left: 1rem;
+}
+
+.Rcourheading{
+  font-size: 2.5rem;
+}
+.iconsizeI{
+  height: 5.5rem;
+  width:  5.5rem;
+}
+.hoverpop :hover {
+    transform: none;
+    color: #F5E79D;
+}
+.searchtag{
+  font-size:2rem;
+}
+
+.specialdivText{
+  background-color: white;
+  height:2.5rem;
+  width:12rem;
+  padding:2px 0 ;
+  margin:auto 1px;
+  position: absolute;
+ top: 24px;
+ left: 60px;
+ border-top-right-radius: 1rem;
+ border-bottom-right-radius: 1rem;
+ font-weight:bold;
+}
+.droptext{
+  text-decoration: none;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size:1.8rem;
+  padding-left:2rem;
+  color: purple;
+}
+
+.specialPic{
+  height:4.3rem;
+  width: 4.3rem;
+
+}
+/* ////// change pass/// */
+
+.popupContainer {
+    position: absolute;
+    width: 60%;
+    height: auto;
+    left: 45%;
+    top: 60px;
+    background: #FFF;
+    border-radius: 1rem;
+}
+.labela{
+  font-size: 2.5rem;
+  font-weight:400;
+}
+.inputa{
+  font-size: 2rem;
+    font-weight:400;
+}
+.btndivCP h6{
+
+  font-size: 2.5rem;
+
+}
+.popupBody {
+    padding: 3rem 1rem;
+
+}
+
+}

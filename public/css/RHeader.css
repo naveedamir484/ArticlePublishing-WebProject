@@ -1,0 +1,338 @@
+
+
+.loginbuttonmargin{
+   border-top-left-radius: 2rem;
+   border-bottom-left-radius: 2rem;
+}
+.SignUpbuttonmargin{
+
+   border-top-right-radius: 2rem;
+   border-bottom-right-radius: 2rem;
+   margin-right: 1rem;
+}
+.popupContainer {
+		position: absolute;
+		width: 330px;
+		height: auto;
+		border-radius: 7px;
+		left: 45%;
+		top: 160px;
+		background: #FFF;
+}
+
+.popupHeader {
+		background: #F4F4F2;
+		position: relative;
+		padding: 10px 20px;
+		border-bottom: 1px solid #DDD;
+		font-weight: bold;
+		border-radius: 7px;
+}
+.dropdown-menu {
+   max-height:18rem;
+   overflow:scroll;
+}
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+  height:none;
+  background-color: #F5F5F5; }
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: grey;
+}
+
+
+.popupHeader .modal_close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 10px 15px;
+		background: #E4E4E2;
+		cursor: pointer;
+		border-radius: 7px;
+		color: #aaa;
+		font-size: 16px;
+}
+.popupBody {
+		padding: 20px;
+}
+
+
+.social_login .social_box {
+		display: block;
+		clear: both;
+		padding: 10px;
+		margin-bottom: 10px;
+		background: #F4F4F2;
+		overflow: hidden;
+}
+
+.social_login .icon {
+		display: block;
+		width: 50px;
+		padding: 5px 10px;
+		margin-right: 10px;
+    border-radius: 1rem;
+		float: left;
+		color: #FFF;
+		font-size: 16px;
+		text-align: center;
+}
+
+
+.social_login .google .icon {
+		background: #DD4B39;
+}
+
+.social_login .icon_title {
+		display: block;
+		padding: 5px 0;
+		float: left;
+		font-weight: bold;
+		font-size: 16px;
+		color: #777;
+}
+
+.social_login .social_box:hover {
+		background: #E4E4E2;
+}
+.mb{
+  border-radius: 1rem;
+}
+.forgot_password {
+		display: block;
+		margin: 20px 0 10px;
+		clear: both;
+		overflow: hidden;
+		text-decoration: none;
+		color: #ED6347;
+}
+.user_login {
+		display: none;
+}
+
+.user_login label {
+		display: block;
+		margin-bottom: 5px;
+}
+
+.user_register {
+		display: none;
+}
+.loginpop :hover {
+  transform: scale(1.04);
+}
+
+.hoverpop :hover {
+    transform: scale(1.1);
+    color: #F5E79D;
+}
+
+.cloudhover :hover{
+  transform: scale(1.3);
+}
+
+nav {
+  align: center;
+}
+.nav-link
+{
+  font-size: 1.13rem;
+  font-weight: 200;
+  text-align: left;
+
+}
+
+.btndiv{
+  margin-top: 2rem;
+}
+.btnpadleft{
+
+ display: inline-block;
+ width:30%;
+
+}
+.btnpadright{
+
+display: inline-block;
+float:right;
+ width:30%;
+
+}
+
+
+.timediv{
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+}
+
+.timelineone{
+  display:none;
+}
+
+
+.time {
+  display: inline-block;
+  list-style-type: none;
+  color: #EDF6E5;
+  opacity: .9;
+  margin-bottom:0px;
+
+}
+
+.time span {
+  display: block;
+  font-size: 1.2rem;
+
+}
+
+.timeul{
+  margin-bottom:0px;
+  height:auto;
+  font-family: 'Saira Condensed', sans-serif;
+  font-weight:100;
+
+}
+
+.divider {
+  border-top: none;
+}
+.temepaturediv{
+  display: flex;
+  justify-content: center;
+}
+.temptext{
+  color:white;
+  padding-top: 1rem;
+  font-size: 1.4rem;
+}
+
+
+.iconsizeI{
+  height: 3.1rem;
+  width: 3.1rem;
+}
+
+
+
+/* ////////////////////////////////////////////////////login sheet/////////////////////////////////////////////// */
+
+
+
+#lean_overlay {
+		position: fixed;
+		z-index: 100;
+		top: 0px;
+		left: 0px;
+		height: 100%;
+		width: 100%;
+		background: #000;
+		display: none;
+}
+
+.centeredText {
+		text-align: center;
+		margin: 20px 0;
+		clear: both;
+		overflow: hidden;
+		text-transform: uppercase;
+}
+
+.action_btns {
+		clear: both;
+		overflow: hidden;
+}
+
+.action_btns a {
+		display: block;
+}
+
+
+/* /////////////////////////////////////////////////////////media section/////////////////////// */
+@media (max-width:994px)
+{
+.divider {border-top: 1px solid silver;}
+
+.timelineone{
+  display:flex;
+}
+.timelinetwo{
+  display:none;
+}
+.timediv{
+  padding-right:5rem;
+}
+/* ///////////////////////////////////////// R changes///////////////////////// */
+.time span {
+  display: block;
+  font-size: 2.7rem;
+
+}
+.RnavHeight{
+  height: 4rem;
+  margin-top: .3rem;
+  margin-bottom: .3rem;
+  width: 10rem;
+  font-size: 2.1rem;
+  margin-right: .4rem;
+}
+.Rbutn{
+  font-size: 2.7rem;
+}
+.nav-link
+{
+  font-size: 2.5rem;
+  font-weight: 200;
+  margin-left: 1rem;
+}
+
+.Rcourheading{
+  font-size: 2.5rem;
+}
+.iconsizeI{
+  height: 5.5rem;
+  width:  5.5rem;
+}
+.hoverpop :hover {
+    transform: none;
+    color: #F5E79D;
+}
+.searchtag{
+  font-size:2rem;
+}
+
+.popupContainer {
+		width: 70% ;
+}
+.popupHeader {
+    font-size: 2.5rem;
+}
+.popupHeader .modal_close {
+
+		font-size: 2.5rem;
+}
+.Rbutton{
+  border-radius: 3rem;
+  margin-top:.7rem;
+}
+.RspMargin{
+  margin-top:3rem;
+  margin-bottom: 3rem;
+}
+.social_login .icon{
+  font-size: 2rem;
+}
+.social_login .icon_title{
+  font-size: 2rem;
+}
+.inputa{
+   font-size: 2.5rem;
+}
+.labela{
+   font-size: 2.5rem;
+}
+
+}
