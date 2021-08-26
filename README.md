@@ -5,13 +5,13 @@ the difference is this time you gonna do it Online. Its very difficult
 to find an ideal plateform to publish your article for free. So come to
 this I have developed a Multi-page Article Publishing Website, using Nodejs.
 
+**Website link-  https://tranquil-brushlands-27746.herokuapp.com/**
+
 # Contents
 
 * Features
 * Technology Used
-* Permissions
 * Note for contributors
-* Feedback
 * Developer
 
 # Features
@@ -43,14 +43,6 @@ this I have developed a Multi-page Article Publishing Website, using Nodejs.
 * Bycrypt to encrypt data
 * Mongoose/Mongodb Server and Database
 
-# Permissions 
-
-After Registration user and access following.
-* Publish Articles
-* Edit Profile 
-* Delete Articles
-* Other Facilities  
-
 # Note for contributors
 
 * All Suggestions are Accepted and Wellcome.
@@ -64,12 +56,8 @@ After Registration user and access following.
 * Open Terminal type npm init -y // npm install // node app.js // 
 * Now at last open web-browser type http://localhost:3000/ .......... BOOM Ready to go
 
-# Feedback
-
-Feel free to report issues and bugs. It will be helpful for further upgradation of this website.
-
 # Developer
-
+Feel free to report issues and bugs. It will be helpful for further upgradation of this website.
 Mohammad Naveed Amir
 (naveedamir484@gmail.com)
 
