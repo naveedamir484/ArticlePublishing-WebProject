@@ -2,7 +2,7 @@
 
 Article Writting is the art of bringing your thoughts to paper. I always want to create a
 website which is fully function and Its very difficult to find an ideal plateform to 
-publish your article for free. So come to this I have developed a Multi-page Article Publishing Website, using Nodejs.
+publish your article for free. So come to this I have developed a Multi-page Article Publishing Website, using Nodejs & Ejs express.
 
 **Website link-  https://tranquil-brushlands-27746.herokuapp.com/**
 
