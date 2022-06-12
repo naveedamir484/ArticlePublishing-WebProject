@@ -8,7 +8,9 @@ publish your article for free. So come to this I have developed a Multi-page Art
 
  <br>
  <hr></hr>
-  <p align="center"><img src="images/2.png" width="350" ><img src="images/5.png" width="350" ></p>
+  <p align="center"><kbd><img src="images/2.png" width="350" ></kbd>
+     <img src="images/5.png" width="350" >
+ </p>
   <hr></hr>
  <br>
 
