@@ -10,8 +10,26 @@ publish your article for free. So come to this I have developed a Multi-page Art
  <hr></hr>
   <p align="center">
  <kbd><img src="images/2.png" width="350" ></kbd>
- <br></br>
  <kbd><img src="images/5.png" width="350" ></kbd>
+ </p>
+  <hr></hr>
+ <br>
+ 
+  <br>
+ <hr></hr>
+  <p align="center">
+ <kbd><img src="images/3.png" width="350" ></kbd>
+ <kbd><img src="images/4.png" width="350" ></kbd>
+ </p>
+  <hr></hr>
+ <br>
+ 
+  
+  <br>
+ <hr></hr>
+  <p align="center">
+ <kbd><img src="images/7.png" width="350" ></kbd>
+ <kbd><img src="images/6.png" width="350" ></kbd>
  </p>
   <hr></hr>
  <br>
