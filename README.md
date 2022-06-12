@@ -7,10 +7,12 @@ publish your article for free. So come to this I have developed a Multi-page Art
 **Website link-  https://tranquil-brushlands-27746.herokuapp.com/**
 
  <hr></hr>
+ <br>
   <p align="center">
  <kbd><img src="images/2.png" width="350" ></kbd>
  <kbd><img src="images/5.png" width="350" ></kbd>
  </p>
+  <br>
   <hr></hr>
  
  <p align="center">
