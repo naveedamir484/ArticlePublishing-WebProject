@@ -1,0 +1,12 @@
+version: '3'
+services:
+  article_app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    entrypoint: sleep infinity
+    volumes:
+      - .:/app/
+    restart: always

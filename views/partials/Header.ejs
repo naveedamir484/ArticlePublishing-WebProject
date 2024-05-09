@@ -53,7 +53,7 @@
        </header>
        <section class="popupBody">
            <!-- Social Login -->
-           <form  action="/changeP" method="post">
+           <form  action="/change_pass" method="post">
 
            <div class="">
                <label class="form-label  labela">Enter Current Password</label>
@@ -160,8 +160,8 @@
               </ul>
           </div>
           <div class="temepaturediv">
-            <div class="cloudhover"><img class="iconsizeI" src="<%=imageurl %>" ></div>
-            <div class="temptext " ><h6 class="Rcourheading"><%= city  %> : <%= temp  %> °C </h6></div>
+            <div class="cloudhover"><img class="iconsizeI" src="" ></div>
+            <div class="temptext " ><h6 class="Rcourheading"></h6></div>
           </div>
         </div>
         </div>
@@ -213,18 +213,18 @@
 
  async function getId(){
 
-       const response = await fetch('/api');
-       const data = await response.json();
-       const id = data.accntID;
-       const name=data.name;
+      const response = await fetch('/fetch_user_info');
+      const data = await response.json();
 
-   if(id!="" && name!=""){
-          $("#dropdownMenu2").text(name);
-          $("#d").attr("href", "/publish/"+id);
-          $("#accountHref").attr("href", "/account/"+id);
-          $("#profileHref").attr("href", "/profile/"+id);
-          $("#myArticlesHref").attr("href", "/myArticles/"+id);
-   }
+      $("#dropdownMenu2").text(data.name);
+      $(".Rcourheading").text(data.temp_text);
+      $(".iconsizeI").attr("src", data.image_url);
+
+      $("#d").attr("href", "/publish");
+      $("#accountHref").attr("href", "/account");
+      $("#profileHref").attr("href", "/profile");
+      $("#myArticlesHref").attr("href", "/myArticles");
+      
  };
 
 getId();
@@ -299,7 +299,7 @@ async function changepass(){
         return false;
       }
 
-      const response = await fetch('/api2/'+a);
+      const response = await fetch('/match_password/'+a);
       const data = await response.json();
       const value = data.boolean;
 
@@ -316,14 +316,6 @@ async function changepass(){
       }
 
       return false;
-
-  // if(id!="" && name!=""){
-  //        $("#dropdownMenu2").text(name);
-  //        $("#d").attr("href", "/publish/"+id);
-  //        $("#accountHref").attr("href", "/account/"+id);
-  //        $("#profileHref").attr("href", "/profile/"+id);
-  //        $("#myArticlesHref").attr("href", "/myArticles/"+id);
-  // }
 };
 
 </script>
